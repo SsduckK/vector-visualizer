@@ -2,6 +2,8 @@
 #define _VECTOR_TYPE_H_
 #include <array>
 #include <iostream>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
 
 
 struct CustomVector
@@ -29,6 +31,13 @@ struct CustomVector
 
 };
 
+struct CustomMatrix
+{
+    Eigen::Matrix4f matrix;
+    int ID;
+};
+
 using Vector_t = CustomVector; 
+using Matirx_t = CustomMatrix;
 
 #endif
