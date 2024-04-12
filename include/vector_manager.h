@@ -3,7 +3,7 @@
 #include <vector>
 #include <array>
 #include <algorithm>
-#include "vector_type.h"
+#include "type_def.h"
 
 class VectorManager
 {

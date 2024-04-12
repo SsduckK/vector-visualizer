@@ -38,6 +38,6 @@ struct CustomMatrix
 };
 
 using Vector_t = CustomVector; 
-using Matirx_t = CustomMatrix;
+using Matrix_t = CustomMatrix;
 
 #endif

@@ -1,8 +1,10 @@
 #include <iostream>
 #include <eigen3/Eigen/Core>
-#include "vector_manager.h"
-#include "vector_type.h"
 #include <array>
+
+#include "vector_manager.h"
+#include "type_def.h"
+#include "transformCalc.h"
 
 int main()
 {
@@ -28,5 +30,13 @@ int main()
     VM.showVector();
     VM.removeVector(2);
     VM.showVector();
-    
+
+    Eigen::Matrix4f mat;
+
+    mat << 1, 2, 3, 4,
+        5, 6, 7, 8,
+        9, 10, 11, 12,
+        13, 14, 15, 16;
+
+    std::cout << mat << std::endl;
 }
