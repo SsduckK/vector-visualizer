@@ -3,11 +3,10 @@
 #include <array>
 #include <iostream>
 
-template <typename T>
 
 struct CustomVector
 {
-    std::array<T, 4> vector;
+    std::array<float, 4> vector;
     int ID;
     std::array<float, 3> color;
     
@@ -16,7 +15,7 @@ struct CustomVector
         return ID;
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const CustomVector<T>& other)
+    friend std::ostream& operator<<(std::ostream& os, const CustomVector& other)
     {
         os << "Vector : ";
         for(int v = 0; v < other.vector.size(); ++v)
@@ -30,6 +29,6 @@ struct CustomVector
 
 };
 
-template <typename T>
-using Vector_t = CustomVector<T>;
+using Vector_t = CustomVector; 
+
 #endif

@@ -12,17 +12,17 @@ int main()
     std::array<float, 4> vector2 = {0.5f, 0.5f, 0.2f, 1};
     int id2 = 2;
     std::array<float, 3> color2 = {0.5f, 0.1f, 0.5f};
-    Vector_t<float> vec;
+    Vector_t vec;
     vec.vector = vector;
     vec.ID = id;
     vec.color = color;
 
-    Vector_t<float> vec2;
+    Vector_t vec2;
     vec2.vector = vector2;
     vec2.ID = id2;
     vec2.color = color2;
 
-    VectorManager<float> VM;
+    VectorManager VM;
     VM.addVector(vec);
     VM.addVector(vec2);
     VM.showVector();

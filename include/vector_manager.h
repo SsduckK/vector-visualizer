@@ -5,21 +5,20 @@
 #include <algorithm>
 #include "vector_type.h"
 
-template <typename T>
 class VectorManager
 {
     private:
-        std::vector<Vector_t<T>> stackVector_;
+        std::vector<Vector_t> stackVector_;
     public:
         VectorManager() {};
         ~VectorManager() {};
-        void addVector(Vector_t<T> addVec)
+        void addVector(Vector_t addVec)
         {
             stackVector_.push_back(addVec);
         }
         void removeVector(int id)
         {
-            auto it = std::find_if(stackVector_.begin(), stackVector_.end(), [id](const Vector_t<T>& vec)  { return vec.getID() == id; });
+            auto it = std::find_if(stackVector_.begin(), stackVector_.end(), [id](const Vector_t& vec)  { return vec.getID() == id; });
             if (it != stackVector_.end())
             {
                 stackVector_.erase(it);
