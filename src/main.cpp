@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <eigen3/Eigen/Core>
 #include <array>
@@ -39,4 +40,8 @@ int main()
         13, 14, 15, 16;
 
     std::cout << mat << std::endl;
+
+    transformCalculator transformcalc;
+    Vector_t transedVec = transformcalc.vectorAdd(&vec, &vec2);
+    std::cout << transedVec << std::endl;
 }

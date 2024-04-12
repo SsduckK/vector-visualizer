@@ -9,15 +9,10 @@
 
 class transformCalculator
 {
-    private:
-        Vector_t vector_;
-        Matrix_t Matrix_;
-    
     public:
         transformCalculator();
         ~transformCalculator();
-        void setVector(std::array<float, 4>);
-        void setMatrix(Eigen::Matrix4f);
+        Vector_t vectorAdd(Vector_t*, Vector_t*);
 };
 
 #endif
