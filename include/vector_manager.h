@@ -1,7 +1,8 @@
-#ifndef _VECTOR_LOADER_H_
-#define _VECTOR_LOADER_H_
+#ifndef _VECTOR_MANAGER_H_
+#define _VECTOR_MANAGER_H_
 #include <vector>
 #include <array>
+#include <algorithm>
 #include "vector_type.h"
 
 template <typename T>
@@ -18,6 +19,16 @@ class VectorManager
         }
         void removeVector(int id)
         {
+            auto it = std::find_if(stackVector_.begin(), stackVector_.end(), [id](const Vector_t<T>& vec)  { return vec.getID() == id; });
+            if (it != stackVector_.end())
+            {
+                stackVector_.erase(it);
+                std::cout << "ID " << id << " removed." << std::endl;
+            }
+            else 
+            {
+                std::cout << "ID not in vectors" << std::endl;
+            }
         }
 
         void showVector()

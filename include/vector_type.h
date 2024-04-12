@@ -10,6 +10,11 @@ struct CustomVector
     std::array<T, 4> vector;
     int ID;
     std::array<float, 3> color;
+    
+    int getID() const
+    {
+        return ID;
+    }
 
     friend std::ostream& operator<<(std::ostream& os, const CustomVector<T>& other)
     {
