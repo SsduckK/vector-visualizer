@@ -17,14 +17,14 @@ struct CustomVector
         return ID;
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const CustomVector& other)
+    friend std::ostream& operator<<(std::ostream& os, const CustomVector& vec)
     {
-        os << "Vector : ";
-        for(int v = 0; v < other.vector.size(); ++v)
-            os << other.vector[v] << " ";
-        os << ", ID : " << other.ID << ", COLOR : ";
-        for(int c = 0; c < other.color.size(); ++c)
-            os << other.color[c] << " ";
+        os << "===Vector===\n";
+        for(int v = 0; v < vec.vector.size(); ++v)
+            os << vec.vector[v] << " ";
+        os << "\n====ID===\n" << vec.ID << "\n===COLOR===\n";
+        for(int c = 0; c < vec.color.size(); ++c)
+            os << vec.color[c] << " ";
         os << "\n";
         return os;
     }
@@ -35,6 +35,29 @@ struct CustomMatrix
 {
     Eigen::Matrix4f matrix;
     int ID;
+
+    int getRows() const
+    {
+        return matrix.rows();
+    }
+    
+    int getCols() const
+    {
+        return matrix.cols();
+    }
+
+    friend std::ostream& operator<<(std::ostream& os, const CustomMatrix& mat)
+    {
+        os << "===Matrix===\n";
+        for(int r = 0; r < mat.getRows(); ++r)
+        {
+            for(int c = 0; c < mat.getCols(); ++c)
+                os << mat.matrix(r, c) << " ";
+            os << "\n";
+        }
+        os << "===ID===\n" << mat.ID << std::endl;
+        return os;
+    }
 };
 
 using Vector_t = CustomVector; 

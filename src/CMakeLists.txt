@@ -1,7 +1,4 @@
-find_package(Pangolin REQUIRED)
-
 set(Eigen3_DIR "/home/ws/eigen/share/eigen3/cmake")
-find_package(Eigen3 REQUIRED)
 
 set(LIB_SOURCE transformCalc.cpp)
 
