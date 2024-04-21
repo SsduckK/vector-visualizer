@@ -57,6 +57,7 @@ TEST_F(TransformTest, CreateCustomVector)
 }
 
 
+
 TEST_F(TransformTest, CalculateCustomVector)
 {
     Vector_t vec;
@@ -76,6 +77,7 @@ TEST_F(TransformTest, CalculateCustomVector)
     transformCalculator transformcalc;
     Vector_t transedVec = transformcalc.vectorAdd(&vec, &vec2);
     std::cout << transedVec << std::endl;
+
 }
 
 TEST_F(TransformTest, MatrixCalc)
