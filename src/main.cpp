@@ -6,7 +6,11 @@
 #include "vector_manager.h"
 #include "type_def.h"
 #include "transformCalc.h"
+#include "GUI.h"
+
 
 int main()
 {
+    GUI gui;    
+    gui.mainLoop();
 }
