@@ -9,5 +9,5 @@ target_include_directories(transformlib PRIVATE ${Eigen3_DIR})
 add_executable(visualizer main.cpp GUI.cpp)
 target_include_directories(visualizer PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(visualizer PRIVATE ${Eigen3_DIR})
-target_link_libraries(visualizer ${OpenCV_LIBS})
+target_link_libraries(visualizer PRIVATE ${FLTK_LIBRARIES} ${OpenCV_LIBS})
 

@@ -2,9 +2,12 @@
 #define _GUI_H_
 
 
+#include <iostream>
+#include <FL/Fl.H>
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Button.H>
 #include "type_def.h"
 #include "vector_manager.h"
-
 
 class GUI
 {
@@ -12,8 +15,13 @@ class GUI
         GUI();
         ~GUI();
         void mainLoop();
+
     private:
+        Fl_Window* window_;
+        Fl_Button* addVectorB_;
         void pLoadVec();
+        static void callAddVectorB(Fl_Widget*, void*);
+        void pLoadScreen();
 };
 
 
