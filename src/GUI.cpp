@@ -1,6 +1,6 @@
 #include "GUI.h"
 
-GUI::GUI() : window_(new Fl_Window(640, 480, "Home")), addVectorB_(new Fl_Button(10, 10, 80, 30, "Add Vector"))
+GUI::GUI() : window_(new Fl_Window(640, 480, "Home")), addVectorB_(new Fl_Button(10, 10, 80, 30, "Add Vector"), mainScreen_(new Fl_RGB_Image())
 {
 }
 
