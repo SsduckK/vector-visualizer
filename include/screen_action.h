@@ -2,16 +2,17 @@
 #define _SCREEN_ACTION_H_
 
 #include <opencv2/opencv.hpp>
-#include <std::vector>
-
+#include <FL/Fl.H>
+#include <FL/Fl_Window.H>
+#include <FL/Fl_Box.H>
 class Screen
 {
     public:
         Screen();
-
+        void getScreen();
     private:
         cv::Mat DefaultScreen_;
-        voidi setGrid();
+        void setGrid();
 
 };
 #endif

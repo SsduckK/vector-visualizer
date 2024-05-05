@@ -20,7 +20,10 @@ class GUI
     private:
         Fl_Window* window_;
         Fl_Button* addVectorB_;
+        Fl_Box* displayBox_;
         Fl_RGB_Image* mainScreen_;
+        uchar* imageData_;
+
         void pLoadVec();
         static void callAddVectorB(Fl_Widget*, void*);
         void pLoadScreen();
