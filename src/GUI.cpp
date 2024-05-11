@@ -36,10 +36,10 @@ void GUI::callAddVectorB(Fl_Widget* widget, void* userdata)
 void GUI::pLoadScreen()
 {
     Screen displayModule;
-    cv::Mat display = displayModule.getScreen(); 
-    imageData_ = new uchar[display.total() * display.elemSize()];
-    memcpy(imageData_, display.data, display.total() * display.elemSize());
-    mainScreen_ = new Fl_RGB_Image(imageData_, display.cols, display.rows, display.channels());
+    display_ = displayModule.getScreen(); 
+    imageData_ = new uchar[display_.total() * display_.elemSize()];
+    memcpy(imageData_, display_.data, display_.total() * display_.elemSize());
+    mainScreen_ = new Fl_RGB_Image(imageData_, display_.cols, display_.rows, display_.channels());
     displayBox_ = new Fl_Box(15, 20, 300, 300); 
     displayBox_->image(mainScreen_);
 }

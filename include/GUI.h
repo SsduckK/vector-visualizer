@@ -6,6 +6,7 @@
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Button.H>
+#include <opencv2/core.hpp>
 #include "type_def.h"
 #include "vector_manager.h"
 #include "screen_action.h"
@@ -22,6 +23,7 @@ class GUI
         Fl_Button* addVectorB_;
         Fl_Box* displayBox_;
         Fl_RGB_Image* mainScreen_;
+        cv::Mat display_;
         uchar* imageData_;
 
         void pLoadVec();
