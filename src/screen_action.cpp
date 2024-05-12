@@ -1,6 +1,6 @@
 #include "screen_action.h"
 
-Screen::Screen() : DefaultScreen_(cv::Mat::zeroes(300, 300, CV_8UC3))
+Screen::Screen() : DefaultScreen_(cv::Mat::zeros(300, 300, CV_8UC3))
 {
     setGrid();
 }

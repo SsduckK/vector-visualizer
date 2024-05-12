@@ -6,7 +6,7 @@ add_library(transformlib ${LIB_SOURCE})
 target_include_directories(transformlib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(transformlib PRIVATE ${Eigen3_DIR}) 
 
-add_executable(visualizer main.cpp GUI.cpp)
+add_executable(visualizer main.cpp GUI.cpp screen_action.cpp)
 target_include_directories(visualizer PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(visualizer PRIVATE ${Eigen3_DIR})
 target_link_libraries(visualizer PRIVATE ${FLTK_LIBRARIES} ${OpenCV_LIBS})

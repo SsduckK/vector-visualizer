@@ -40,6 +40,6 @@ void GUI::pLoadScreen()
     imageData_ = new uchar[display_.total() * display_.elemSize()];
     memcpy(imageData_, display_.data, display_.total() * display_.elemSize());
     mainScreen_ = new Fl_RGB_Image(imageData_, display_.cols, display_.rows, display_.channels());
-    displayBox_ = new Fl_Box(15, 20, 300, 300); 
+    displayBox_ = new Fl_Box(100, 20, 300, 300); 
     displayBox_->image(mainScreen_);
 }

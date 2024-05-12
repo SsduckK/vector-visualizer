@@ -9,7 +9,7 @@ class Screen
 {
     public:
         Screen();
-        void getScreen();
+        cv::Mat getScreen();
     private:
         cv::Mat DefaultScreen_;
         void setGrid();
