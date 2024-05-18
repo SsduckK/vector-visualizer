@@ -10,6 +10,7 @@
 #include "type_def.h"
 #include "vector_manager.h"
 #include "screen_action.h"
+#include "add_vector.h"
 
 class GUI
 {
@@ -20,7 +21,7 @@ class GUI
 
     private:
         Fl_Window* window_;
-        Fl_Button* addVectorB_;
+        AddVector addVectorB_;
         Fl_Box* displayBox_;
         Fl_RGB_Image* mainScreen_;
         cv::Mat display_;
