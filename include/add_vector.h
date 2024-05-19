@@ -10,6 +10,7 @@ class AddVector : public ButtonBase
 {
     public:
         AddVector(int x, int y, int width, int height, std::string name);
+        void callbackButton(Fl_Wdiget*, void*) override;
 };
 
 #endif

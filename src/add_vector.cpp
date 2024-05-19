@@ -4,7 +4,7 @@ AddVector::AddVector(int x, int y, int width, int height, std::string name) : Bu
 {
 }
 
-void AddVector::callbackButton(Fl_Widget*, void*) override
+void AddVector::callbackButton(Fl_Widget*, void*) 
 {
 }
 
